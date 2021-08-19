@@ -28,8 +28,8 @@ import java.util.List;
 public class UserDetailLoginServiceImpl implements UserDetailsService {
     @Resource
     private UserDetailMapper userDetailMapper;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         SysUser user = userDetailMapper.selectUserByUserName(username);
