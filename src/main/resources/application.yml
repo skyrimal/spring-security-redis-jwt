@@ -1,0 +1,12 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_test?serverTimezone=Asia/Shanghai
+    username: root
+    password: toor
+  redis:
+    host: 127.0.0.1
+mybatis:
+  mapper-locations: classpath*:org/learn/security_redis_login/**/mapper/xml/*.xml

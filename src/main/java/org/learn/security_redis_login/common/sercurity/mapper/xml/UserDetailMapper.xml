@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.learn.security_redis_login.common.sercurity.mapper.UserDetailMapper">
+    <resultMap id="user" type="org.learn.security_redis_login.common.sercurity.pojo.SysUser">
+        <result property="password" column="password"/>
+        <result property="username" column="username"/>
+    </resultMap>
+    <select id="selectUserByUserName" resultMap="user">
+        select username,password from sys_user where username = #{username}
+    </select>
+</mapper>
