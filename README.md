@@ -148,11 +148,11 @@ security里面装的是：
 
 ​			登录、认证两个过滤器；user实体类；UserDetailsService实现类及userDetailMapper
 
-			>这里注意一下，因为UserDetails的默认实现中没有username+password的两参构造器，且没有无参构造器，
-			>
-			>所以mybatis的xml进行映射实体类时会出错，这里我写的SysUser作用就是重写构造器，实际上完全可以使用跟数据库对应的实体类UserDO
-			>
-			>这里我直接使用继承security的user是因为重写简单，项目定义的User实体跟UserDetail同系，是因为如果涉及其他操作起来更简单，但实际上，没有其他操作了。后面再考虑改不改
+			>		>	>这里注意一下，因为UserDetails的默认实现中没有username+password的两参构造器，且没有无参构造器，
+			>		>	>
+			>		>	>所以mybatis的xml进行映射实体类时会出错，这里我写的SysUser作用就是重写构造器，实际上完全可以使用跟数据库对应的实体类UserDO
+			>		>	>
+			>		>	>这里我直接使用继承security的user是因为重写简单，项目定义的User实体跟UserDetail同系，是因为如果涉及其他操作起来更简单，但实际上，没有其他操作了。后面再考虑改不改
 
 ![image-20210819134202660](README.assets/image-20210819134202660.png)
 
@@ -407,3 +407,6 @@ oauth2本身就有redis缓存令牌的实现，但是不兼容jwt；又有jwt的
 又或者加上role判断、菜单啥的
 
 或者再研究一下前后端分离啥的——我就是向着前后端分离搭建的项目，前端只需要调用接口就可以了
+
+
+
